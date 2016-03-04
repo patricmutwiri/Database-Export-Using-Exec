@@ -7,7 +7,7 @@ $dbname 	= $config->database;
 $username = $config->username;
 $path 		= 'C:\\path\\to\\mysql\\mysqldump.exe -u'; //add -p if you have a password
 $file 		= $dbname.'_'.time().'.sql.zip';
-$destination 	= "C:\\xampp\\htdocs\\uchumi_intranet\\db_backups\\".$file."";
+$destination 	= "C:\\path\\to\\export\\backup\\".$file."";
 function backup($path,$username,$dbname,$destination){
 	if(!exec($path.$username.' '.$dbname.' > '.$destination,$out)){
 		print_r($out); //return
